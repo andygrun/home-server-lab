@@ -15,3 +15,7 @@ This project documents my personal home server built using an old laptop. It's p
 
 _This repository is public to serve as a portfolio project._
 
+## 🚧 Work in Progress
+
+This project is part of my learning journey. Stay tuned!
+
