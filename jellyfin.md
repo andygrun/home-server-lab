@@ -28,3 +28,39 @@ Benefit	                                    Description
 🔄 Smooth workflow	                        Drag & drop media into your Samba share — it appears in Jellyfin.
 🌍 Remote access ready	                    Add reverse proxy (e.g., Caddy, Nginx) + Tailscale/Cloudflare                                  Tunnel for secure remote streaming.
 
+📄 Step 2: Create a docker-compose.yml file
+
+Create it in ~/docker/jellyfin/: 
+
+yaml: 
+version: '3.8'
+
+services:
+  jellyfin:
+    image: jellyfin/jellyfin:latest
+    container_name: jellyfin
+    network_mode: bridge
+    volumes:
+      - ./config:/config
+      - ./cache:/cache
+      - ./media:/media:ro
+    restart: unless-stopped
+    environment:
+      - TZ=Europe/Lisbon
+
+      🌐 Step 3: Start the container
+
+      cd ~/docker/jellyfin
+docker compose up -d
+
+
+🔒 Step 4: (Optional) Open the Jellyfin port in UFW
+If you’re using UFW, allow access to port 8096 (default):
+
+sudo ufw allow 8096/tcp
+
+🌟 Step 5: Access Jellyfin Web UI
+
+http://<your-server-ip>:8096
+
+
