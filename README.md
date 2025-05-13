@@ -1,6 +1,7 @@
 # Home Server Lab
 
-This project documents my personal home server built using an old laptop. It's part of my journey to learn Linux system administration, networking, and DevOps practices.
+This project documents my personal home server built using an old laptop.
+It's part of my journey to learn Linux system administration, networking, and DevOps practices.
 
 ### 🧰 Tech Stack:
 - Ubuntu Server
