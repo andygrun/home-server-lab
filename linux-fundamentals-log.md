@@ -691,3 +691,4 @@ Successfully demonstrated understanding of:
 
 The practical exercises confirmed that Linux access control is determined by the combination of **user identity, group membership, ownership, and permissions**.
 
+
